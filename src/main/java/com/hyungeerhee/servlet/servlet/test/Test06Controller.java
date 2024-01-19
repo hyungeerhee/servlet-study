@@ -2,6 +2,7 @@ package com.hyungeerhee.servlet.servlet.test;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,9 +28,10 @@ public class Test06Controller extends HttpServlet {
 		int sub = num1 - num2;
 		int multi = num1 * num2;
 		int div = num1 / num2;
+		ArrayList<Integer> integerList = new ArrayList<>();
 		
 		/* {"addtion":10, "substraction":5, "multiplication":25, "division":2} */
 		out.println("{\"addition\":" + add + ",\"substrion\":" + sub + ",\"multiplication\":" + multi + ",\"division\":" + div + "}");
 	}
-
+	
 }

@@ -2,6 +2,8 @@ package com.hyungeerhee.servlet.servlet.ex;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +18,7 @@ public class Ex03Controller extends HttpServlet{
 		response.setContentType("application/json"); 
 		
 		PrintWriter out = response.getWriter();
-		
+		List<String> scoreList = Arrays.asList(new String[]{"X", "O", "O", "O", "X", "O", "O", "O", "X", "O"});
 		// 이름과 생년월일을 전달 받고,
 		// 이름과 나이를 html 정돈해서 response에 담는다.
 		
