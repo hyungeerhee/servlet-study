@@ -23,7 +23,7 @@
  		}
  		if(operator.equals("/")) {
  			result = num1 / num2;
- 		}
+ 		 }
  		
  		
  		
