@@ -28,10 +28,14 @@
 		
 		String searchMenu = request.getParameter("menu");
 		
+		String option = request.getParameter("option");
+		
+	
+		
 		
 		
 	%>
-	
+	<%= option %>
 	<h3 class="text-center mt-5">검색 결과</h3>
 	<table class="table text-center">
 		<thead>
@@ -41,20 +45,24 @@
 				<th>별점</th>
 			</tr>
 		</thead>
+		<tbody>
 		<% for (int i = 0; i < list.size(); i++) {
 			Map<String, Object> searchMap = list.get(i);
+			//메뉴 조건
 			if(searchMap.get("menu").equals(searchMenu)) {
+				//option이 on이고, point 가 4.0 이상인 경우
+				double point = (Double)searchMap.get("point");
 				
-			
+				if(option == null || (option.equals("on") && point >= 4.0)) {			
 			%>
 		
-		<tbody>
+		
 			<tr>
 				<td><%= searchMap.get("menu")%></td>
 				<td><%= searchMap.get("name")%></td>
 				<td><%= searchMap.get("point")%></td>
 			</tr>
-			<% }} %>
+			<% }}} %>
 		</tbody>
 	</table>
 	

@@ -12,7 +12,7 @@
 	<h3>메뉴검색</h3>
 	<form method="get" action="/jsp/test/test07.jsp">
 		<input type = "text" name = "menu">
-		<input type="checkbox" class="mr-1"><label>4점 이하 제외</label>
+		<input type="checkbox" class="mr-1" name="option"><label>4점 이하 제외</label>
 		<br>
 		<button type="submit" class="mt-2 btn btn-success">검색</button>
 	</form>

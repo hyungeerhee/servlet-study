@@ -73,7 +73,7 @@
 			<tr>
 				<td><%= bookMap.get("id")%></td>
 				<td><img src= <%= bookMap.get("image")%> alt="표지" width="70"></img></td>
-				<td><a href=""><%= bookMap.get("title")%></a></td>
+				<td><a href="/jsp/test/test08-input.jsp?what=<%=bookMap.get("id")%>"><%= bookMap.get("title")%></a></td>
 			</tr>
 		<% } %>
 		</tbody>

@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%
+	Date now = new Date();
+	SimpleDateFormat formatter = new SimpleDateFormat("yy/MM/dd hh:mm:ss");
+	
+	String dateString = formatter.format(now);
+	
+	
+	
+%>
+
+
+<div>
+	<h3><%= dateString %></h3>
+</div>
