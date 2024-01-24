@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@charset "UTF-8";
+
+#wrap {
+	width:1200px;
+	
+	margin:0 auto;
+	
+}
+
+
+
+header {
+	height:100px;
+}
+
+.main-menu {
+	height:40px;
+}
+
+footer{
+	height:80px;
+}
+
+.main-menu {
+    height:45px;
+    background-color: red;
+    color: black;
+    font-size:20px;
+}
+
+.main-link {
+	
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+}
+

@@ -11,21 +11,15 @@
 </head>
 <body>
 	
-	<div id="wrap" class=" ">
-		<header class=" d-flex justify-content-center align-items-center">
-			<h1>마론달</h1>
-		</header>
-		<nav class="main-menu">
-			<ul class="nav">
-				<li class="nav-item"><a href="#">메뉴1</a></li>
-				<li class="nav-item"><a href="#">메뉴2</a></li>
-				<li class="nav-item"><a href="#">메뉴3</a></li>
-				<li class="nav-item"><a href="#">메뉴4</a></li>
-				<li class="nav-item"><a href="#">메뉴5</a></li>
-			</ul>
-		</nav>
-		<section class="contents bg-warning"></section>
-		<footer class="bg-primary"></footer>
+	<div id="wrap">
+		<jsp:include page="header.jsp"/>
+		<jsp:include page="menu.jsp"/>
+
+		<section class="contents ">
+			<img class="w-100" alt="치타" src="https://us.123rf.com/450wm/mmjtechnology/mmjtechnology2307/mmjtechnology230700988/207840402-%EB%88%88-%EC%86%8D%EC%9D%98-%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4-%EB%B0%B1%ED%98%B8-%EC%95%BC%EC%83%9D-%EB%8F%99%EB%AC%BC%EC%9D%B4-%EC%9E%88%EB%8A%94-%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4-%EA%B2%A8%EC%9A%B8-%ED%92%8D%EA%B2%BD.jpg">
+			<h3>호랑이 사진</h3>
+		</section>
+		<jsp:include page="footer.jsp"/>
 	</div>
 	
 		
