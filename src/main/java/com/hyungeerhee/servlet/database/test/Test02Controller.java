@@ -10,26 +10,32 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hyungeerhee.servlet.common.MysqlService;
 @WebServlet("/database/site/insert")
-public class SiteInsertController extends HttpServlet {
-	
-	@Override 
+public class Test02Controller extends HttpServlet {
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		
 		PrintWriter out = response.getWriter();
 		
-		String name = request.getParameter("name");
+		String site = request.getParameter("site");
 		String url = request.getParameter("url");
 		
+		
 		MysqlService mysqlService = MysqlService.getInstance();
+		
 		mysqlService.connect();
 		
-		String query = "INSERT INTO `site`\r\n"
+		int count = mysqlService.update("INSERT INTO `site`\r\n"
 				+ "(`name`, `url`)\r\n"
-				+ "VALUE \r\n"
-				+ "('" + name + "', " + url + "');";
+				+ "VALUE\r\n"
+				+ "('" + site + "', '" + url + "');");
 		
-		int count = mysqlService.update(query);
+		
+		
+		
 		response.sendRedirect("/database/test02.jsp");
+		
+		
 	}
-	
 
 }
